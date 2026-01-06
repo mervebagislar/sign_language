@@ -156,8 +156,8 @@ sign-language-detector-python/
 ├── model.p              # Eğitilmiş model (pickle formatı)
 ├── data.pickle          # İşlenmiş veri seti (pickle formatı)
 ├── requirements.txt     # Python bağımlılıkları
-├── README.md           # Bu dosya
-└── README_API.md        # API dokümantasyonu
+└── README.md           # Bu dosya
+
 ```
 
 ## 🔬 Teknik Detaylar
