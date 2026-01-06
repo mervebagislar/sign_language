@@ -8,8 +8,18 @@ import numpy as np
 
 data_dict = pickle.load(open('./data.pickle', 'rb'))
 
-data = np.asarray(data_dict['data'])
-labels = np.asarray(data_dict['labels'])
+# Sadece 42 uzunluğundaki verileri kullan (tek el için)
+data_filtered = []
+labels_filtered = []
+for i, d in enumerate(data_dict['data']):
+    if len(d) == 42:  # Tek el: 21 landmark * 2 (x, y) = 42
+        data_filtered.append(d)
+        labels_filtered.append(data_dict['labels'][i])
+
+data = np.asarray(data_filtered)
+labels = np.asarray(labels_filtered)
+
+print(f'Using {len(data)} samples out of {len(data_dict["data"])} total samples')
 
 x_train, x_test, y_train, y_test = train_test_split(data, labels, test_size=0.2, shuffle=True, stratify=labels)
 

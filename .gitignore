@@ -1,0 +1,13 @@
+# Data & models
+data/
+*.zip
+*.pickle
+*.p
+*.h5
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Temp
+tempCodeRunnerFile.py
